@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			        /*
+         * 1存在>0
+         * 2全部>0
+         * 3前面添加元素
+         * 4筛选数组>0
+         * 5数组元素扩大两倍
+         * 6数组的合并
+         * 7排序
+         * 8数组的反转
+         * 9包含
+         * 10查找元素下标
+         * 11转换 1-2-3-4-5  数组——字符串  默认，
+         * */
+        
+        
+        
+         /*1、判断一个数组是否存在小于0的数，true，false；
+         * 
+         */
+//      var arr1=[1,2,3,-4];
+//      fu(arr1);
+//      function fu(arr){
+//      	for(var i=0;i<arr.length;i++){
+//      		if(arr[i]<0){
+//      			return true;
+//      		}
+//      	}return false;
+//      }
+//      alert(fu(arr1));
+
+
+
+        /*2、判断一个数组全是小于0的数，true，false；*/
+////      var arr1=[1,2,3,-4];
+//      var arr2=[-1,-2,-3]
+////      fu(arr1);
+//      fu(arr2);
+//      function fu(arr){
+//      		for(var i=0;i<arr.length;i++){
+//      			if(arr[i]>0){
+//      				return false;
+//      			}
+//      		}return true;
+//      }
+//      alert(fu(arr2));
+
+
+
+        /*3、在数组的前面添加元素*/
+//      var arr1=[10,20,30];
+//      push(arr1,'a','b','d');
+//      function push(arr,...rest){
+//      	if(typeof(arr)=='object'&&rest.length>0){
+//      		for(var i=0;i<arr.length;i++){
+//      			rest[rest.length]=arr[i];
+//      		}
+//      	   }
+//      	alert(rest);
+//          }
+      
+        /*或者*/
+//      var arr1=[10,20,30];
+//      push(arr1,'a','b','d');
+//      function push(arr,...rest){
+//      	var newarr=[];
+//      	for(var i=0;i<arr.length;i++){
+//      		newarr[i]=arr[i];
+//      	}arr.length=0;
+//      	for(var j=0;j<rest.length;j++){
+//      			arr[j]=rest[j];
+//      		}
+//          for(var k=0;k<newarr.length;k++){
+//          	arr[arr.length]=newarr[k];
+//          }
+//          alert(arr);
+//      }
+//      
+//      
+
+
+
+        /*4、筛选出数组中大于0的元素*/
+//      var arr1=[1,2,3,-4];
+//      fu(arr1);
+//      function fu(arr){
+//      	var newarr=[];
+//      		for(var i=0;i<arr.length;i++){
+//      			if(arr[i]>0){
+//      				newarr[newarr.length]=arr[i];
+//      	       }
+//      		}return newarr;
+//      	}
+//      alert(fu(arr1));
+
+
+        /*5、数组元素扩大两倍*/
+//      var arr1=[1,2,3,5];
+//      da(arr1);
+//      function da(arr){
+//      	var newarr=[];
+//      	for(var i=0;i<arr.length;i++){
+//      		newarr[i]=2*arr[i];
+//      	}return newarr;
+//      }
+//      alert(da(arr1));
+
+
+        /*6、数组的合并*/
+//      var arr3=[1,2,3,4];
+//      var arr4=['a','b','c'];
+//      he(arr3,arr4);
+//      function he(arr1,arr2){
+//      	for(var i=0;i<arr2.length;i++){
+//      		arr1[arr1.length]=arr2[i];
+//      	}
+//      	alert(arr1);
+//      } 
+
+
+        /*7、数组中元素排序*/
+//      arr1=[10,20,12,34,32,46,40];
+//			sort(arr1,'<');
+//			sort(arr1,'>');
+//			function sort(arr,flag){
+//				if(flag=='<'){
+//					sheng(arr);
+//				}
+//				else if(flag=='>'){
+//					jiang(arr);
+//				}
+//			}
+//			function sheng(arr){
+//				for(var i=0;i<arr.length;i++){
+//					for(var j=i+1;j<arr.length;j++){
+//						if(arr[i]>arr[j]){
+//							var temp=arr[j];
+//							arr[j]=arr[i];
+//							arr[i]=temp;
+//						}
+//					}
+//				}
+//				alert(arr);
+//			}
+//			function jiang(arr){
+//				for(var i=0;i<arr.length;i++){
+//					for(var j=i+1;j<arr.length;j++){
+//						if(arr[i]<arr[j]){
+//							var temp=arr[j];
+//							arr[j]=arr[i];
+//							arr[i]=temp;
+//						}
+//					}
+//				}
+//				alert(arr);
+//			}
+
+
+
+        /*8、数组的反转*/
+//      var arr1=[1,2,3,4,5];
+//      fan(arr1);
+//      function fan(arr){
+//      	var newarr=[];
+//      	for(var i=arr.length-1;i>=0;i--){
+//      		newarr[newarr.length]=arr[i];
+//      	}return newarr;
+//      }
+//      var exist=fan(arr1);
+//      alert(exist);
+        
+        
+        
+        /*9、判断某个数组中是否包含某个元素*/
+//      var arr1=[1,2,3,"a","b"];
+//      var arr2="a";
+//      you(arr1,arr2);
+//      function you(arr1,arr2){
+//      	for(var i=0;i<arr1.length;i++){
+//      		if(arr1[i]==arr2){
+//      			return true;
+//      		}
+//      	}return false;
+//      }
+//      var exist=you(arr1,arr2);
+//      alert(exist);
+
+
+        /*10、查找某元素的下标*/
+//      var arr1=[1,2,3,"a","b"];
+//      var arr2="a";
+//      you(arr1,arr2);
+//      function you(arr1,arr2){
+//      	for(var i=0;i<arr1.length;i++){
+//      		if(arr1[i]==arr2){
+//      			return i;
+//      		}
+//      	}return false;
+//      }
+//      var exist=you(arr1,arr2);
+//      alert(exist);
+
+
+        /*11、将一个数组转换成字符串，*/
+        var arr1=[1,2,3,4,5]; 
+        str=arr1[0];
+        function zhuan(arr){
+                for(var i=1;i<arr.length;i++){
+            		str+='-';
+            		str+=arr[i];
+                }return str;	
+            }
+           alert(zhuan(arr1));
+        
+        
+        
+		</script>
+	</body>
+</html>

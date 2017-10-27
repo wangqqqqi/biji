@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*模拟数组*/
+			function myArr(...rest){
+				/*模拟数组*/
+				for(let i=0;i<rest.length;i++){
+					this[i]=rest[i];
+				}
+				this.length=rest.length;
+				/*1、判断是否存在大于某个数*/
+				this.exist=function(num){
+					for(let i=0;i<this.length;i++){
+						if(this[i]>num){
+							return true;
+						}
+					}return false;
+				}
+				/*2、判断数组元素是否全部大于某个数*/
+				this.all=function(num){
+					for(let i=0;i<this.length;i++){
+						if(this[i]<num){
+							return false;
+						}
+					}return true;
+				}
+			    /*3、数组元素扩大n倍*/
+			    this.big=function(num){
+			    	let newarr=[];
+				    for(let i=0;i<this.length;i++){
+					    newarr[i]=this[i]*num;
+				    }
+				    return newarr;
+			    }
+			    
+			    
+			    /*4、数组的合并*/
+			    this.add=function(arr){
+			    	for(let i=0;i<arr.length;i++){
+			    		this[this.length]=arr[i];
+			    		this.length++;
+			    	}return this;
+			    }
+			    /*5、数组后添加某些元素*/
+			    this.add2=function(...rest){
+			    	for(let i=0;i<rest.length;i++){
+			    		this[this.length]=rest[i];
+			    		this.length++;
+			    	}return this;
+			    }
+			    /*6、将数组中大于某个数的元素*/
+			    this.filter=function(num){
+			   	    let newarr=new myArr();
+			        for(let i=0;i<this.length;i++){
+			    	if(this[i]>num){
+			    		newarr.add2(this[i]);
+			    	}
+			       }return newarr;
+			    }
+			    
+			    /*7、数组元素乘某个数*/
+			    this.map=function(fn){
+			    	/*fn=function(value,index){
+            	        return value*index;
+                    }*/
+			    	let newarr=new myArr();
+			    	for(i=0;i<this.length;i++){
+			    		newarr.add2(fn(this[i],5));
+			    	}return newarr;
+			    }
+			    
+			    /*8、数组的反转*/
+			    this.reverse=function(){
+			    	let newarr=new myArr();
+			    	for(let i=this.length;i>=0;i--){
+			    		newarr.add2(this[i]);
+			    	}return newarr;
+			    }
+	        }    
+			
+			  
+			    
+			
+			
+			var arr=new myArr(1,2,3,4);
+//			console.log(arr);
+//			alert(arr.length);
+//          alert(arr.exist(3));
+//          alert(arr.all(0));
+//          console.log(arr.big(3));
+            /*var arr1=["a","b","c"];
+            console.log(arr.add(arr1));*/
+//          console.log(arr.filter(1));
+            /* console.log(arr.map(function(value,index){
+            	return value*index;
+            }));*/
+//          console.log(arr.reverse())
+           
+           
+
+
+		</script>
+	</body>
+</html>
